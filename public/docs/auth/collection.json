@@ -1,0 +1,144 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "127.0.0.1"
+        }
+    ],
+    "info": {
+        "name": "Node Express Starter Documentation",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_postman_id": "070bfda9-0fa3-41b9-b6bd-ba0f289e0a3b"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api/auth/login",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/api/auth/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"username\": \"ihza\",\n    \"password\": \"123\"\n}"
+                        },
+                        "description": "Logged-in the user\n\nIf success, user will get access-token and refresh token with 200 http response code.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImloemEiLCJpZCI6MywiaWF0IjoxNjYwNjI1NTM0LCJleHAiOjE2NjA3MzM1MzR9.zGIOgWunvR58DBYnl5cGPZ64tvCEUFzxDLXdtpPo7J8\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImloemEiLCJpZCI6MywiaWF0IjoxNjYwNjI1NTM0fQ.AzUYTwQD-xvPjEofszQnDb-nYtDwBiDXu8vo203Cyug\",\n    \"username\": \"ihza\",\n    \"message\": \"Login Success!\"\n}",
+                            "name": "200, Login Success"
+                        }
+                    ]
+                },
+                {
+                    "name": "Refresh Token",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api/auth/refresh-token",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/api/auth/refresh-token"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"\n}"
+                        },
+                        "description": "Refresh access token if expired\n\nIf success, user will get new access-token with 200 http response code.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN1cGVyYWRtaW4iLCJpZCI6MSwiaWF0IjoxNjYwNjI0NzMxLCJleHAiOjE2NjA3MzI3MzF9.1JnasxRa6hyW4ZAu_qH0M-3EOv33S8L5HuNSvIamxMM\"\n}",
+                            "name": "200, Success"
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api/auth/logout",
+                            "query": [],
+                            "raw": "http://{{baseUrl}}/api/auth/logout"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"\n}"
+                        },
+                        "description": "Logout the user",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 204,
+                            "body": "null",
+                            "name": "204, Success"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

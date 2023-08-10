@@ -1,0 +1,1993 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Node Express Starter Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="css/theme-default.print.css" media="print">
+    <script src="js/theme-default-2.0.2.js"></script>
+
+    <link rel="stylesheet"
+          href="//unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/obsidian.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.2/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <script>
+    var baseUrl = "http://127.0.0.1";
+    </script>
+    <script src="js/tryitout-2.0.2.js"></script>
+    
+</head>
+
+<body data-languages="[&#34;bash&#34;,&#34;javascript&#34;]">
+<a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="navbar-image" />
+      </span>
+</a>
+<div class="tocify-wrapper">
+    
+    
+        <div class="lang-selector">
+            
+                <a href="#" data-language-name="bash">bash</a>
+            
+                <a href="#" data-language-name="javascript">javascript</a>
+            
+        </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+    <ul class="search-results"></ul>
+
+    <ul id="toc">
+    </ul>
+
+    
+        <ul class="toc-footer" id="toc-footer">
+            
+                <li><a href="collection.json">View Postman collection</a></li>
+            
+                <li><a href="http://github.com/knuckleswtf/scribe-js">Documentation powered by Scribe ✍</a></li>
+            
+        </ul>
+    
+        <ul class="toc-footer" id="last-updated">
+            <li>Last updated: August 26, 2022</li>
+        </ul>
+</div>
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<blockquote>
+  <p>Base URL:</p>
+</blockquote>
+<pre><code class="yaml language-yaml">http://127.0.0.1
+</code></pre>
+
+        <h1 id="authenticatingrequests">Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        
+    <h1 id="Endpoints">Endpoints</h1>
+    <p>
+        
+    </p>
+
+    
+        
+<h2 id="Endpoints-GET-api-permissions">GET /api/permissions</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-api-permissions">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://127.0.0.1/api/permissions"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/permissions"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-api-permissions">
+
+
+<blockquote>Example response (200):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "user_config": [
+        "view user_config_role",
+        "create user_config_role",
+        "update user_config_role",
+        "delete user_config_role",
+        "view user_config_user",
+        "create user_config_user",
+        "update user_config_user",
+        "delete user_config_user"
+    ]
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-api-permissions" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-api-permissions"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-api-permissions"></code></pre>
+</span>
+<span id="execution-error-GET-api-permissions" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-api-permissions"></code></pre>
+</span>
+
+<form id="form-GET-api-permissions"
+      data-method="GET"
+      data-path="/api/permissions"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-api-permissions', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-api-permissions"
+            onclick="tryItOut('GET-api-permissions');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-api-permissions"
+            onclick="cancelTryOut('GET-api-permissions');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-api-permissions" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/api/permissions</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-GET-api-roles">GET /api/roles</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-api-roles">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://127.0.0.1/api/roles"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/roles"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-api-roles">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-api-roles" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-api-roles"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-api-roles"></code></pre>
+</span>
+<span id="execution-error-GET-api-roles" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-api-roles"></code></pre>
+</span>
+
+<form id="form-GET-api-roles"
+      data-method="GET"
+      data-path="/api/roles"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-api-roles', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-api-roles"
+            onclick="tryItOut('GET-api-roles');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-api-roles"
+            onclick="cancelTryOut('GET-api-roles');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-api-roles" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/api/roles</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-POST-api-roles">POST /api/roles</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-POST-api-roles">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request POST \
+    "http://127.0.0.1/api/roles"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/roles"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-POST-api-roles">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-POST-api-roles" hidden>
+    <blockquote>Received response<span id="execution-response-status-POST-api-roles"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POST-api-roles"></code></pre>
+</span>
+<span id="execution-error-POST-api-roles" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POST-api-roles"></code></pre>
+</span>
+
+<form id="form-POST-api-roles"
+      data-method="POST"
+      data-path="/api/roles"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POST-api-roles', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-POST-api-roles"
+            onclick="tryItOut('POST-api-roles');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-POST-api-roles"
+            onclick="cancelTryOut('POST-api-roles');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-POST-api-roles" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-black">POST</small>
+
+
+    <b><code>/api/roles</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-GET-api-roles-id">GET /api/roles/:id</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-api-roles--id">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://127.0.0.1/api/roles/sunt"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/roles/sunt"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-api-roles--id">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-api-roles--id" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-api-roles--id"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-api-roles--id"></code></pre>
+</span>
+<span id="execution-error-GET-api-roles--id" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-api-roles--id"></code></pre>
+</span>
+
+<form id="form-GET-api-roles--id"
+      data-method="GET"
+      data-path="/api/roles/:id"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-api-roles--id', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-api-roles--id"
+            onclick="tryItOut('GET-api-roles--id');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-api-roles--id"
+            onclick="cancelTryOut('GET-api-roles--id');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-api-roles--id" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/api/roles/:id</code></b>
+</p>
+
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="GET-api-roles--id"
+               data-component="url" required hidden>
+    
+
+<br>
+<p>The ID of the api/role.</p>
+</p>
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-PUT-api-roles-id">PUT /api/roles/:id</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-PUT-api-roles--id">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request PUT \
+    "http://127.0.0.1/api/roles/sit"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/roles/sit"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-PUT-api-roles--id">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-PUT-api-roles--id" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUT-api-roles--id"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUT-api-roles--id"></code></pre>
+</span>
+<span id="execution-error-PUT-api-roles--id" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUT-api-roles--id"></code></pre>
+</span>
+
+<form id="form-PUT-api-roles--id"
+      data-method="PUT"
+      data-path="/api/roles/:id"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUT-api-roles--id', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-PUT-api-roles--id"
+            onclick="tryItOut('PUT-api-roles--id');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-PUT-api-roles--id"
+            onclick="cancelTryOut('PUT-api-roles--id');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-PUT-api-roles--id" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-darkblue">PUT</small>
+
+
+    <b><code>/api/roles/:id</code></b>
+</p>
+
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="PUT-api-roles--id"
+               data-component="url" required hidden>
+    
+
+<br>
+<p>The ID of the api/role.</p>
+</p>
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-DELETE-api-roles-id">DELETE /api/roles/:id</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-DELETE-api-roles--id">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request DELETE \
+    "http://127.0.0.1/api/roles/nemo"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/roles/nemo"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-DELETE-api-roles--id">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-DELETE-api-roles--id" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETE-api-roles--id"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETE-api-roles--id"></code></pre>
+</span>
+<span id="execution-error-DELETE-api-roles--id" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETE-api-roles--id"></code></pre>
+</span>
+
+<form id="form-DELETE-api-roles--id"
+      data-method="DELETE"
+      data-path="/api/roles/:id"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETE-api-roles--id', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-DELETE-api-roles--id"
+            onclick="tryItOut('DELETE-api-roles--id');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-DELETE-api-roles--id"
+            onclick="cancelTryOut('DELETE-api-roles--id');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-DELETE-api-roles--id" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-red">DELETE</small>
+
+
+    <b><code>/api/roles/:id</code></b>
+</p>
+
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="DELETE-api-roles--id"
+               data-component="url" required hidden>
+    
+
+<br>
+<p>The ID of the api/role.</p>
+</p>
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-GET-api-roles-id-permissions">GET /api/roles/:id/permissions</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-api-roles--id-permissions">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://127.0.0.1/api/roles/itaque/permissions"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/roles/itaque/permissions"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-api-roles--id-permissions">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-api-roles--id-permissions" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-api-roles--id-permissions"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-api-roles--id-permissions"></code></pre>
+</span>
+<span id="execution-error-GET-api-roles--id-permissions" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-api-roles--id-permissions"></code></pre>
+</span>
+
+<form id="form-GET-api-roles--id-permissions"
+      data-method="GET"
+      data-path="/api/roles/:id/permissions"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-api-roles--id-permissions', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-api-roles--id-permissions"
+            onclick="tryItOut('GET-api-roles--id-permissions');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-api-roles--id-permissions"
+            onclick="cancelTryOut('GET-api-roles--id-permissions');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-api-roles--id-permissions" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/api/roles/:id/permissions</code></b>
+</p>
+
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="GET-api-roles--id-permissions"
+               data-component="url" required hidden>
+    
+
+<br>
+<p>The ID of the api/role.</p>
+</p>
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-POST-api-roles-id-permissions">POST /api/roles/:id/permissions</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-POST-api-roles--id-permissions">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request POST \
+    "http://127.0.0.1/api/roles/minus/permissions"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data '{
+    "permissions": "et"
+}'
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/roles/minus/permissions"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+const body = {
+    "permissions": "et"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify(body),
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-POST-api-roles--id-permissions">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-POST-api-roles--id-permissions" hidden>
+    <blockquote>Received response<span id="execution-response-status-POST-api-roles--id-permissions"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POST-api-roles--id-permissions"></code></pre>
+</span>
+<span id="execution-error-POST-api-roles--id-permissions" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POST-api-roles--id-permissions"></code></pre>
+</span>
+
+<form id="form-POST-api-roles--id-permissions"
+      data-method="POST"
+      data-path="/api/roles/:id/permissions"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POST-api-roles--id-permissions', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-POST-api-roles--id-permissions"
+            onclick="tryItOut('POST-api-roles--id-permissions');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-POST-api-roles--id-permissions"
+            onclick="cancelTryOut('POST-api-roles--id-permissions');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-POST-api-roles--id-permissions" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-black">POST</small>
+
+
+    <b><code>/api/roles/:id/permissions</code></b>
+</p>
+
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="POST-api-roles--id-permissions"
+               data-component="url" required hidden>
+    
+
+<br>
+<p>The ID of the api/role.</p>
+</p>
+
+
+
+
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+
+    
+    
+            <p>
+                <b><code>permissions</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="permissions"
+               data-endpoint="POST-api-roles--id-permissions"
+               data-component="body" required hidden>
+    
+
+<br>
+
+            </p>
+        
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-GET-api-users">GET /api/users</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-api-users">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://127.0.0.1/api/users"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/users"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-api-users">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-api-users" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-api-users"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-api-users"></code></pre>
+</span>
+<span id="execution-error-GET-api-users" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-api-users"></code></pre>
+</span>
+
+<form id="form-GET-api-users"
+      data-method="GET"
+      data-path="/api/users"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-api-users', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-api-users"
+            onclick="tryItOut('GET-api-users');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-api-users"
+            onclick="cancelTryOut('GET-api-users');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-api-users" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/api/users</code></b>
+</p>
+
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-POST-api-users">POST /api/users</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-POST-api-users">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request POST \
+    "http://127.0.0.1/api/users"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data '{
+    "password": "quibusdam"
+}'
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/users"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+const body = {
+    "password": "quibusdam"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify(body),
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-POST-api-users">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-POST-api-users" hidden>
+    <blockquote>Received response<span id="execution-response-status-POST-api-users"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POST-api-users"></code></pre>
+</span>
+<span id="execution-error-POST-api-users" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POST-api-users"></code></pre>
+</span>
+
+<form id="form-POST-api-users"
+      data-method="POST"
+      data-path="/api/users"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POST-api-users', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-POST-api-users"
+            onclick="tryItOut('POST-api-users');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-POST-api-users"
+            onclick="cancelTryOut('POST-api-users');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-POST-api-users" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-black">POST</small>
+
+
+    <b><code>/api/users</code></b>
+</p>
+
+
+
+
+
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+
+    
+    
+            <p>
+                <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="password"
+               data-endpoint="POST-api-users"
+               data-component="body" required hidden>
+    
+
+<br>
+
+            </p>
+        
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-GET-api-users-id">GET /api/users/:id</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-GET-api-users--id">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request GET \
+    --get "http://127.0.0.1/api/users/aspernatur"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/users/aspernatur"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-GET-api-users--id">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-GET-api-users--id" hidden>
+    <blockquote>Received response<span id="execution-response-status-GET-api-users--id"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GET-api-users--id"></code></pre>
+</span>
+<span id="execution-error-GET-api-users--id" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GET-api-users--id"></code></pre>
+</span>
+
+<form id="form-GET-api-users--id"
+      data-method="GET"
+      data-path="/api/users/:id"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GET-api-users--id', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-GET-api-users--id"
+            onclick="tryItOut('GET-api-users--id');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-GET-api-users--id"
+            onclick="cancelTryOut('GET-api-users--id');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-GET-api-users--id" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-green">GET</small>
+
+
+    <b><code>/api/users/:id</code></b>
+</p>
+
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="GET-api-users--id"
+               data-component="url" required hidden>
+    
+
+<br>
+<p>The ID of the api/user.</p>
+</p>
+
+
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-PUT-api-users-id">PUT /api/users/:id</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-PUT-api-users--id">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request PUT \
+    "http://127.0.0.1/api/users/iusto"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data '{
+    "password": "maxime"
+}'
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/users/iusto"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+const body = {
+    "password": "maxime"
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: JSON.stringify(body),
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-PUT-api-users--id">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-PUT-api-users--id" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUT-api-users--id"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUT-api-users--id"></code></pre>
+</span>
+<span id="execution-error-PUT-api-users--id" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUT-api-users--id"></code></pre>
+</span>
+
+<form id="form-PUT-api-users--id"
+      data-method="PUT"
+      data-path="/api/users/:id"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUT-api-users--id', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-PUT-api-users--id"
+            onclick="tryItOut('PUT-api-users--id');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-PUT-api-users--id"
+            onclick="cancelTryOut('PUT-api-users--id');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-PUT-api-users--id" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-darkblue">PUT</small>
+
+
+    <b><code>/api/users/:id</code></b>
+</p>
+
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="PUT-api-users--id"
+               data-component="url" required hidden>
+    
+
+<br>
+<p>The ID of the api/user.</p>
+</p>
+
+
+
+
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+
+    
+    
+            <p>
+                <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="password"
+               data-endpoint="PUT-api-users--id"
+               data-component="body" required hidden>
+    
+
+<br>
+
+            </p>
+        
+
+
+</form>
+
+
+
+    
+        
+<h2 id="Endpoints-DELETE-api-users-id">DELETE /api/users/:id</h2>
+
+<p>
+
+</p>
+
+
+
+<span id="example-requests-DELETE-api-users--id">
+<blockquote>Example request:</blockquote>
+
+
+
+<pre><code class="bash language-bash">curl --request DELETE \
+    "http://127.0.0.1/api/users/necessitatibus"  \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
+</code></pre>
+
+
+
+<pre><code class="javascript language-javascript">const url = new URL(
+    "http://127.0.0.1/api/users/necessitatibus"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+.then(response =&gt; response.json())
+.then(json =&gt; console.log(json));
+</code></pre>
+
+
+</span>
+
+<span id="example-responses-DELETE-api-users--id">
+
+
+<blockquote>Example response (400):</blockquote>
+
+
+<details class="annotation">
+    <summary>
+        <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+    </summary>
+    <pre><code class="language-http">
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8 </code></pre>
+</details> 
+
+<pre>
+ 
+<!-- If response is a JSON string, prettify it. Otherwise, just print it -->
+<code class="language-json">{
+    "errors": {
+        "message": "User Not Logged In!"
+    }
+}</code>
+ </pre>
+
+
+</span>
+<span id="execution-results-DELETE-api-users--id" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETE-api-users--id"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETE-api-users--id"></code></pre>
+</span>
+<span id="execution-error-DELETE-api-users--id" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETE-api-users--id"></code></pre>
+</span>
+
+<form id="form-DELETE-api-users--id"
+      data-method="DELETE"
+      data-path="/api/users/:id"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{&#34;Content-Type&#34;:&#34;application/json&#34;,&#34;Accept&#34;:&#34;application/json&#34;}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETE-api-users--id', this);">
+<h3>
+    Request&nbsp;
+    
+    <button
+            type="button"
+            style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-tryout-DELETE-api-users--id"
+            onclick="tryItOut('DELETE-api-users--id');">Try it out ⚡</button>
+    <button
+            type="button"
+            style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-canceltryout-DELETE-api-users--id"
+            onclick="cancelTryOut('DELETE-api-users--id');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button
+            type="submit"
+            style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+            id="btn-executetryout-DELETE-api-users--id" hidden>Send Request 💥</button>
+    
+</h3>
+
+<p>
+    <small class="badge badge-red">DELETE</small>
+
+
+    <b><code>/api/users/:id</code></b>
+</p>
+
+
+
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+
+
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>
+
+
+
+
+    
+        <input type="text"
+               name="id"
+               data-endpoint="DELETE-api-users--id"
+               data-component="url" required hidden>
+    
+
+<br>
+<p>The ID of the api/user.</p>
+</p>
+
+
+
+
+</form>
+
+
+
+    
+
+
+        
+    </div>
+    <div class="dark-box">
+        
+            <div class="lang-selector">
+                
+                    <a href="#" data-language-name="bash">bash</a>
+                
+                    <a href="#" data-language-name="javascript">javascript</a>
+                
+            </div>
+        
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var languages = ["bash","javascript"];
+        setupLanguages(languages);
+    });
+</script>
+
+</body>
+</html>
